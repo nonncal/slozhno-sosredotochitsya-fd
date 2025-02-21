@@ -1,5 +1,109 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+.header {
+  inline-size: 100%;
+  block-size: 678px;
+  background-image: url("../images/cover-image-dark.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.header__decoration::after {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  top: 10px;
+  right: 10px;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+}
+
+.header__decoration::before {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  bottom: 10px;
+  left: 10px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__inscription {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  font-weight: 400;
+  font-size: 18px;
+  gap: 10px;
+  line-height: 25px;
+  color: var(--accent-color);
+}
+
+.header__inscription::after {
+  content: '';
+  align-self: center;
+  border-radius: 50%;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--accent-color);
+  display: block;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__theme-menu {
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 75px;
+}
+
+.header__theme-menu-button {
+  padding: 0 13px 3px;
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-item .header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-item:not(:last-child) {
+  padding-bottom: 15px;
+}
+
+.header__title {
+  padding:68px 10px 55px;
+  text-align: left;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__description {
+  margin: 0 10px;
+  background-color: var(--accent-color);
+  color: #000028;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  white-space: pre-line;
+}
+
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
