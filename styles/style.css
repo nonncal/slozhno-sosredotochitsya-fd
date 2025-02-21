@@ -85,7 +85,8 @@
 }
 
 .header__title {
-  padding:68px 10px 55px;
+  padding:68px 0 55px;
+  margin: 0 var(--side-margin);
   text-align: left;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -94,13 +95,16 @@
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-.header__description {
-  margin: 0 10px;
+.title-decor {
   background-color: var(--accent-color);
   color: #000028;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
+}
+
+.header__description {
+  margin: 0 var(--side-margin);
   white-space: pre-line;
 }
 
