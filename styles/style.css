@@ -14,7 +14,7 @@
   position: relative;
 }
 
-.header__decoration::after {
+.decorations::after {
   content: "";
   position: absolute;
   inline-size: 25px;
@@ -25,7 +25,7 @@
   border-block-start: 1px solid var(--accent-color);
 }
 
-.header__decoration::before {
+.decorations::before {
   content: "";
   position: absolute;
   inline-size: 25px;
@@ -201,7 +201,7 @@
 .pictures-gallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 6px;
 }
 
 .pictures-gallery__image {
@@ -212,3 +212,14 @@
   margin-block-end: 40px;
 }
 
+.footer {
+  display: grid;
+  inline-size: 100%;
+  block-size: 668px;
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  color: var(--title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
