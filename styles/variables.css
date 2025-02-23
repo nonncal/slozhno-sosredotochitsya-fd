@@ -7,5 +7,5 @@
   --background-image: url("../images/cover-image-dark.png");
   --accent-color: #ff0070;
   --title-color: #db00ff;
-  --side-padding: 10px;
+  --side-offset: 10px;
 }
