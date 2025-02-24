@@ -76,7 +76,7 @@
 }
 
 .header__theme-menu-button_active {
-  pointer-events: none
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
@@ -225,13 +225,13 @@
 
 .footer__title {
   text-align: center;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 @media (width >= 768px) {
-  
+
   .main {
     padding: 0 20px;
   }
@@ -248,7 +248,7 @@
     padding: 0 20px 53px 0;
   }
 
-  .header__title{
+  .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     grid-row: 2;
     align-self: start;
@@ -265,12 +265,12 @@
     top: 20px;
     right: 30px;
   }
- 
+
   .decorations::after {
     top: 20px;
     right: 20px;
   }
-  
+
   .decorations::before {
     left: 20px;
     bottom: 20px;
@@ -287,7 +287,7 @@
   .research-cards .card:first-of-type {
     margin-block-start: 60px;
   }
-  
+
   .research-cards .card {
     grid-column: 2;
   }
