@@ -75,6 +75,10 @@
   text-transform: lowercase;
 }
 
+.header__theme-menu-button_active {
+  pointer-events: none
+}
+
 .header__theme-menu-button:hover {
   outline: 1px solid #ff007066;
 }
@@ -107,7 +111,7 @@
 
 .title-decor {
   background-color: var(--accent-color);
-  color: #000028;
+  color: var(--decor-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -150,7 +154,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
-  color:#F1B2CE;
+  color: var(--card-text-color);
 }
 
 .card__description {
