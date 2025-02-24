@@ -59,7 +59,7 @@
 }
 
 .header__theme-menu {
-  padding-right: var(--side-offset);
+  padding-right: 10px;
   text-align: right;
   padding-block-start: 75px;
 }
@@ -100,7 +100,7 @@
 }
 
 .header__title {
-  padding: 68px var(--side-offset) 55px;
+  padding: 68px 10px 55px;
   text-align: left;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -118,12 +118,11 @@
 }
 
 .header__description {
-  margin: 0 var(--side-offset);
+  margin: 0 10px;
   white-space: pre-line;
 }
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: cover;
@@ -131,7 +130,7 @@
 }
 
 .main {
-  padding: 0 var(--side-offset);
+  padding: 0 10px;
 }
 
 .card__title {
@@ -232,27 +231,24 @@
 }
 
 @media (width >= 768px) {
-
-  :root {
-    --side-offset: 20px;
-  }
   
+  .main {
+    padding: 0 20px;
+  }
+
   .header {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    /* grid-template-columns: minmax(min-content, max-content); */
     block-size: 1024px;
   }
 
   .header__theme-menu {
     grid-row: 1;
-    /* grid-column: 2; */
     align-self: end;
     padding: 0 20px 53px 0;
   }
 
   .header__title{
-    /* grid-column: 1; */
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     grid-row: 2;
     align-self: start;
@@ -261,9 +257,8 @@
 
   .header__description {
     grid-row: 3;
-    /* grid-column: span 2; */
     align-self: start;
-    margin: 40px var(--side-offset) 0 384px;
+    margin: 40px 20px 0 384px;
   }
 
   .header__inscription {
@@ -382,7 +377,7 @@
   .header__theme-menu {
     align-self: start;
     justify-items: center;
-    margin-block-start: var(--side-offset);
+    margin-block-start: 20px;
     margin-inline-start: 23px;
   }
 
@@ -397,7 +392,7 @@
   }
 
   .header__description {
-    margin: 51px var(--side-offset) 0 513px;
+    margin: 51px 20px 0 513px;
   }
 
   .header__title {
