@@ -4,7 +4,7 @@
   inline-size: 100vw;
   block-size: 100vh;
   min-block-size: 668px;
-  max-inline-size: 1024px;
+  max-inline-size: 1440px;
   max-block-size: 1024px;
 }
 
@@ -128,7 +128,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--bg-color);
+  background-color: var(--background-color);
 }
 
 .main {
@@ -224,7 +224,7 @@
   inline-size: 95vw;
   block-size: 100vh;
   min-block-size: 668px;
-  max-inline-size: 1024px;
+  max-inline-size: 1440px;
   max-block-size: 1024px;
 }
 
