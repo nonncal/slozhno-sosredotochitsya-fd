@@ -1,11 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .header {
-  inline-size: 100%;
-  block-size: 668px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  inline-size: 100vw;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .decorated-zone {
@@ -28,7 +26,7 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  bottom: 20px;
+  bottom: 10px;
   left: 10px;
   border-inline-start: 1px solid var(--accent-color);
   border-block-end: 1px solid var(--accent-color);
@@ -124,9 +122,11 @@
 
 .page {
   background-image: var(--background-image);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-color: var(--bg-color);
 }
 
 .main {
@@ -219,8 +219,9 @@
 
 .footer {
   display: grid;
-  inline-size: 100%;
-  block-size: 668px;
+  inline-size: 95vw;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .footer__title {
@@ -230,6 +231,16 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
+.decorations.footer__decorations::before {
+  bottom: 14px;
+  left: 0;
+}
+
+.decorations.footer__decorations::after {
+  top: 8px;
+  right: 0;
+}
+
 @media (width >= 768px) {
 
   .main {
@@ -237,9 +248,9 @@
   }
 
   .header {
+    min-block-size: 1024px;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    block-size: 1024px;
   }
 
   .header__theme-menu {
@@ -283,27 +294,28 @@
   .card__title.less-margin {
     margin-block-start: 60px;
   }
-
-  .research-cards .card:first-of-type {
-    margin-block-start: 60px;
-  }
-
-  .research-cards .card {
-    grid-column: 2;
-  }
-
+  
   .reasons-cards .card__title {
     margin-block-start: 80px;
     max-inline-size: 230px;
+  }
+  
+  .research-cards .card {
+    grid-column: 2;
+  }
+  
+  .solution-cards .card {
+    grid-column: 2;
+  }
+  
+  .research-cards .card:first-of-type {
+    margin-block-start: 60px;
   }
 
   .solution-cards {
     grid-template-columns: fit-content(32%) fit-content(68%);
   }
 
-  .solution-cards .card {
-    grid-column: 2;
-  }
 
   .solution-cards .card:first-of-type {
     margin-block-start: 80px;
@@ -350,7 +362,7 @@
   }
 
   .footer {
-    block-size: 1024px;
+    min-block-size: 1024px;
   }
 
   .footer__title {
@@ -359,19 +371,19 @@
 
   .decorations.footer__decorations::after {
     right: 0;
-    top: 0;
+    top: 20px;
   }
 
   .decorations.footer__decorations::before {
     left: 0;
-    bottom: 0;
+    bottom: 20px;
   }
 }
 
 @media (width >= 1024px) {
 
   .header {
-    block-size: 768px;
+    min-block-size: 768px;
   }
 
   .header__theme-menu {
@@ -414,6 +426,12 @@
   }
 
   .footer {
-    block-size: 768px;
+    min-block-size: 768px;
   }
+
+  .decorations.footer__decorations::after {
+    right: -10px;
+    top: 20px;
+  }
+
 }
