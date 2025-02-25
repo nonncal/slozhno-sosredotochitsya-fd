@@ -4,6 +4,8 @@
   inline-size: 100vw;
   block-size: 100vh;
   min-block-size: 668px;
+  max-inline-size: 1024px;
+  max-block-size: 1024px;
 }
 
 .decorated-zone {
@@ -222,6 +224,8 @@
   inline-size: 95vw;
   block-size: 100vh;
   min-block-size: 668px;
+  max-inline-size: 1024px;
+  max-block-size: 1024px;
 }
 
 .footer__title {
