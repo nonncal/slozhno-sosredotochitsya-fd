@@ -1,40 +1,35 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .header {
-  inline-size: 100vw;
   block-size: 100vh;
   min-block-size: 668px;
-  max-inline-size: 1440px;
-  max-block-size: 1024px;
-}
-
-.decorated-zone {
   position: relative;
 }
 
-.decorations::after {
+.decorated-zone::after {
   content: "";
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
   top: 10px;
   right: 10px;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--decorations-color);
+  border-block-start: 1px solid var(--decorations-color);
 }
 
-.decorations::before {
+.decorated-zone::before {
   content: "";
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
   bottom: 10px;
   left: 10px;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--decorations-color);
+  border-block-end: 1px solid var(--decorations-color);
 }
 
 .header__inscription {
+  text-transform: uppercase;
   position: absolute;
   top: 10px;
   right: 20px;
@@ -66,7 +61,7 @@
 
 .header__theme-menu-button {
   padding: 0 13px 3px;
-  color: var(--accent-color);
+  color: var(--theme-button-color);
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
@@ -77,10 +72,11 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
+  border: 1px solid currentColor;
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid #ff007066;
+  outline: 1px solid var(--theme-button-hover-color);
 }
 
 .header__theme-menu-button:focus {
@@ -89,10 +85,6 @@
 
 .header__theme-menu-button:focus-visible {
   border-block-end: 1px solid currentColor;
-}
-
-.header__theme-menu-item .header__theme-menu-button_active {
-  border: 1px solid currentColor;
 }
 
 .header__theme-menu-item:not(:last-child) {
@@ -137,7 +129,7 @@
 
 .card__title {
   margin-block-start: 50px;
-  color: var(--accent-color);
+  color: var(--card-title-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -168,12 +160,12 @@
 }
 
 .card__text-link {
-  text-shadow: 2px 1px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
 }
 
 .card__text-link:hover {
-  text-decoration: underline;
+  border-block-end: 1px solid currentColor;
 }
 
 .card__text-link:focus {
@@ -220,29 +212,26 @@
 }
 
 .footer {
+  position: relative;
   display: grid;
-  inline-size: 95vw;
-  block-size: 100vh;
+  block-size: 100vw;
   min-block-size: 668px;
-  max-inline-size: 1440px;
-  max-block-size: 1024px;
 }
 
 .footer__title {
+  align-self: center;
   text-align: center;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.decorations.footer__decorations::before {
-  bottom: 14px;
-  left: 0;
+.footer.decorations::after {
+  top: 7px;
 }
 
-.decorations.footer__decorations::after {
-  top: 8px;
-  right: 0;
+.footer.decorations::before {
+  bottom: 14px;
 }
 
 @media (width >= 768px) {
@@ -252,7 +241,6 @@
   }
 
   .header {
-    min-block-size: 1024px;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
   }
@@ -364,10 +352,10 @@
   .pictures-gallery .pictures-gallery__item:last-of-type {
     margin-block-end: 0;
   }
-
+/* 
   .footer {
-    min-block-size: 1024px;
-  }
+    position: relative;
+  } */
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -385,10 +373,6 @@
 }
 
 @media (width >= 1024px) {
-
-  .header {
-    min-block-size: 768px;
-  }
 
   .header__theme-menu {
     align-self: start;
@@ -427,10 +411,6 @@
   .reasons-cards .card__title {
     margin-block-start: 80px;
     max-inline-size: 315px;
-  }
-
-  .footer {
-    min-block-size: 768px;
   }
 
   .decorations.footer__decorations::after {
