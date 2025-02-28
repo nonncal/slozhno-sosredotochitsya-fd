@@ -267,7 +267,8 @@
     bottom: 20px;
   }
 
-  .cards-section__rows-type {
+  .research-cards,
+  .solution-cards {
     grid-template-columns: fit-content(32%) fit-content(68%);
   }
 
@@ -364,7 +365,7 @@
     padding: 80px 0 55px;
   }
 
-  .cards-section__columns-type {
+  .reasons-cards {
     grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(3, fit-content(calc(96% / 3)));
   }
